@@ -1,5 +1,6 @@
 class HomeownerInsurancesController < ApplicationController
   before_action :set_homeowner_insurance, only: %i[ show edit update destroy ]
+  before_action :set_quote, only: [:new, :create]
 
   # GET /homeowner_insurances or /homeowner_insurances.json
   def index
@@ -12,7 +13,10 @@ class HomeownerInsurancesController < ApplicationController
 
   # GET /homeowner_insurances/new
   def new
-    @homeowner_insurance = HomeownerInsurance.new
+    unless @quote
+      @homeowner_insurance = HomeownerInsurance.new
+    end
+    @homeowner_insurance
   end
 
   # GET /homeowner_insurances/1/edit
@@ -21,7 +25,11 @@ class HomeownerInsurancesController < ApplicationController
 
   # POST /homeowner_insurances or /homeowner_insurances.json
   def create
-    @homeowner_insurance = HomeownerInsurance.new(homeowner_insurance_params)
+    # @homeowner_insurance = HomeownerInsurance.new(homeowner_insurance_params)
+    if @quote
+      @homeowner_insurance = HomeownerInsurance.new
+      return redirect_to new_homeowner_insurance_url
+    end
 
     respond_to do |format|
       if @homeowner_insurance.save
@@ -58,13 +66,18 @@ class HomeownerInsurancesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_homeowner_insurance
-      @homeowner_insurance = HomeownerInsurance.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def homeowner_insurance_params
-      params.fetch(:homeowner_insurance, {})
-    end
+  def set_quote
+    @quote = params[:quote] || false
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_homeowner_insurance
+    @homeowner_insurance = HomeownerInsurance.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def homeowner_insurance_params
+    params.fetch(:homeowner_insurance, {})
+  end
 end

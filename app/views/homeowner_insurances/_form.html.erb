@@ -1,7 +1,8 @@
 <%= form_with(model: homeowner_insurance) do |form| %>
   <% if homeowner_insurance.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(homeowner_insurance.errors.count, "error") %> prohibited this homeowner_insurance from being saved:</h2>
+      <h2><%= pluralize(homeowner_insurance.errors.count, "error") %> prohibited this homeowner_insurance from being
+        saved:</h2>
 
       <ul>
         <% homeowner_insurance.errors.each do |error| %>
@@ -11,7 +12,41 @@
     </div>
   <% end %>
 
+
   <div>
-    <%= form.submit %>
+    <div>
+      <div><input name="homeowner_insurance[first_name]" placeholder="First name*" required="required" type="text">
+      </div>
+      <div><input name="homeowner_insurance[last_name]" placeholder="Last name*" required="required" type="text">
+      </div>
+      <div><input name="homeowner_insurance[email]" placeholder="Email*" required="required" type="email"></div>
+      <div><input name="homeowner_insurance[phone]" placeholder="Phone*" required="required" type="tel"></div>
+      <div>
+        <input name="homeowner_insurance[assessment]" placeholder="Municipal Evaluation of the property*" required="required" type="number">
+      </div>
+    </div>
+    <div>
+      <div><input name="homeowner_insurance[address]" placeholder="Address*" required="required" type="text"></div>
+      <div><input name="homeowner_insurance[zip]" placeholder="Postal code*" required="required" type="text"></div>
+      <div><input name="homeowner_insurance[city]" placeholder="City*" required="required" type="text"></div>
+      <div><input name="homeowner_insurance[province]" placeholder="Province*" required="required" type="text"></div>
+    </div>
   </div>
+
+  <% if @quote %>
+    <%= render "request_form" %>
+  <% end %>
+
+  <% unless @quote || @request_callback %>
+    <%= hidden_field_tag(:quote, true) %>
+    <%= form.submit "GET QUOTE" %>
+  <% end %>
+
+  <% if @quote %>
+    <%= hidden_field_tag(:request_callback, true) %>
+    <%= form.submit "REQUEST A CALLBACK" %>
+  <% end %>
+  <% if @request_callback %>
+    <%= form.submit "SUBMIT" %>
+  <% end %>
 <% end %>

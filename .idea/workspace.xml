@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31ed5351-9ffb-47ea-aa98-33b361b5f95b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+    <list default="true" id="52f8bda6-5de6-45e1-9e90-1335670bc31e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/homeowner_insurances_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/homeowner_insurances_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/homeowner_insurances/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/homeowner_insurances/_form.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +14,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2CCoo0yDKAIDxndiqEDOPJmljYm" />
+  <component name="ProjectId" id="2CDGzvB3nP5ry3UExfLGPFsx7qG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Rails.Development: homeowner_insurance_app">
     <configuration name="Development: homeowner_insurance_app" type="RailsRunConfigurationType" factoryName="Rails">
@@ -131,12 +133,12 @@
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="31ed5351-9ffb-47ea-aa98-33b361b5f95b" name="Default Changelist" comment="" />
-      <created>1658316098682</created>
+      <changelist id="52f8bda6-5de6-45e1-9e90-1335670bc31e" name="Default Changelist" comment="" />
+      <created>1658330012168</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1658316098682</updated>
-      <workItem from="1658316100100" duration="4368000" />
+      <updated>1658330012168</updated>
+      <workItem from="1658330019100" duration="2275000" />
     </task>
     <servers />
   </component>
