@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @homeowner_insurance %>
+
+<div>
+  <%= link_to "Edit this homeowner insurance", edit_homeowner_insurance_path(@homeowner_insurance) %> |
+  <%= link_to "Back to homeowner insurances", homeowner_insurances_path %>
+
+  <%= button_to "Destroy this homeowner insurance", @homeowner_insurance, method: :delete %>
+</div>

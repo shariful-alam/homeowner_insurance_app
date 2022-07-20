@@ -1,0 +1,2 @@
+class HomeownerInsurance < ApplicationRecord
+end
